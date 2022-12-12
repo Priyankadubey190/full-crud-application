@@ -1,12 +1,6 @@
 {
     "product": [
-      {
-        "image": "https://tse2.mm.bing.net/th?id=OIP.zRtS3kDls7LXqx281oMgOgHaKG&pid=Api&P=0",
-        "price": "900",
-        "color": "brown",
-        "review": "4.6",
-        "id": 1
-      },
+      
       {
         "id": 2,
         "image": "https://media.istockphoto.com/photos/sisters-show-clothes-picture-id646281830?k=20&m=646281830&s=612x612&w=0&h=nVYNbVazSDSF2A2Nnuv_2W1YQBIvIGlwsFGEpgBgrfY=",
@@ -91,55 +85,7 @@
         "price": "600",
         "review": "5.8"
       },
-      {
-        "id": 14,
-        "image": "https://tse4.mm.bing.net/th?id=OIP.BD2vUdy05h-4LbPDwKzXWQHaKG&pid=Api&P=0",
-        "color": "blue",
-        "price": "600",
-        "review": "4.2"
-      },
-      {
-        "id": 15,
-        "image": "https://tse4.mm.bing.net/th?id=OIP.ULCLJqRwGAleDiKJTbCFuQHaJ4&pid=Api&P=0",
-        "color": "red",
-        "price": "900",
-        "review": "3.5"
-      },
-      {
-        "id": 16,
-        "image": "https://tse4.mm.bing.net/th?id=OIP.6tikl25y4LzGdqTWMLuqtQHaJ3&pid=Api&P=0",
-        "color": "blue",
-        "price": "400",
-        "review": "4.6"
-      },
-      {
-        "id": 17,
-        "image": "https://tse3.mm.bing.net/th?id=OIP.prGkxmofzRDna69DlPXh1gHaJk&pid=Api&P=0",
-        "color": "black",
-        "price": "245",
-        "review": "6.8"
-      },
-      {
-        "id": 18,
-        "image": "https://tse4.mm.bing.net/th?id=OIP.077N83KIUGLUO-cVWeBYDAHaJS&pid=Api&P=0",
-        "color": "yellow",
-        "price": "1100",
-        "review": "8.3"
-      },
-      {
-        "id": 19,
-        "image": "https://tse2.mm.bing.net/th?id=OIP.pm6wtMRGmvu1j9ZtlhwkQAHaND&pid=Api&P=0",
-        "color": "red",
-        "price": "1200",
-        "review": "5.9"
-      },
-      {
-        "id": 20,
-        "image": "https://tse2.mm.bing.net/th?id=OIP.BmBkvAkZ7ZpLz-YnZY4wjAHaLH&pid=Api&P=0",
-        "color": "red",
-        "price": "700",
-        "review": "6.3"
-      },
+      
       {
         "image": "http://image26.stylesimo.com/o_img/2017/08/09/231420-10380357/women-s-elegant-solid-evening-pleated-chiffon-dress.jpg",
         "price": "400",

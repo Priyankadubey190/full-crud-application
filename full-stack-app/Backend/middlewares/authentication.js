@@ -5,10 +5,13 @@ const authentication = (req,res,next)=>{
     if(token){
         const decoded = jwt.verify(token, "hush")
         if(decoded){
+            console.log("decoded",decoded.userID);
             const userID = decoded.userID
             req.body.userID = userID
             next()
+
         }
+
         else{
             res.send("Please login")
         }

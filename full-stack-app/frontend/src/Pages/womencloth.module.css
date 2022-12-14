@@ -1,0 +1,40 @@
+.myclass{
+    margin-left: 100px;
+    width:80%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+  }
+  .filter{
+    padding: 50px 10px 20px 50px;
+  }
+  /* Link{
+    background-color:none;
+  } */
+  .childcon:hover{
+    background-color:green;
+  }
+  .childcon{
+    border:5px solid blue;
+    margin: 10px;
+    border-top-left-radius:30px;
+    border-bottom-right-radius:30px;
+
+  }
+  .detail{
+    display:flex;
+    justify-content:space-evenly;
+    font-size:20px;
+    font-weight:bold;
+    color:rgb(76, 0, 255);
+  }
+  span{
+    color:black;
+    font-size:18px;
+  }
+  img{
+    height:250px;
+    width: 360px;
+    border-top-left-radius:30px;
+    border-bottom-right-radius:30px;
+
+  }

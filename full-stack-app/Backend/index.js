@@ -68,7 +68,7 @@ app.post("/login", async (req, res)=>{
     }
 })
 
-app.use(authentication)
+//app.use(authentication)
 app.use("/womendata", womenRoute)
 
 app.listen(process.env.port, async()=> {

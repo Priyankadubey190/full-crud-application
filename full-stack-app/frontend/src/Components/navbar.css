@@ -55,7 +55,7 @@ nav ul li {
     font-family: 'Roboto', sans-serif;
 }
 a:hover {
-    background-color: black;
+    /* background-color: black; */
     color: #ffff;
 }
  #toggle{

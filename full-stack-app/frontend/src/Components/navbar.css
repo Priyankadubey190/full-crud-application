@@ -1,6 +1,6 @@
 .header{ 
     background-color: #28373E;
-    height:40px;
+    height:100px;
     width: 100%;
 }
 .container1{
@@ -31,6 +31,12 @@
 .logo{
     color:rgb(29, 184, 227);
     font-weight: bold;
+}
+
+.logoimg{
+    margin: 0;
+    padding: 0;
+    height:75px;
 }
 .header{
     font-size: 1.1rem;

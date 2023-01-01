@@ -5,7 +5,7 @@ const ClothCard = ({ id,img,price,review }) => {
   return (
     <div data-testid={`watch-card-wrapper-${id}`} className={style.childcon}>
       <div>
-        <img data-testid="watch-card-image" src={img} alt="" height="150px"/>
+        <img data-testid="watch-card-image" src={img} alt="" height="150px" class="proimg" />
       </div>
       <div className={style.detail}>
         <div data-testid="watch-name">Price <span>{price}</span></div>

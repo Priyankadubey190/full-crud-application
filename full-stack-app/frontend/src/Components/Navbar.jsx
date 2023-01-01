@@ -8,7 +8,8 @@ export default function Navbar() {
     <div>
         <header className="header">
         <div className="container1 flex">
-            <span className="logo">OYODO</span>
+            {/* <span className="logo">OYODO</span> */}
+            <img src="https://github.com/Priyankadubey190/full-crud-application/raw/main/full-stack-app/frontend/public/images/web-logo.png" alt="" class="logoimg" />
             <label className="bars" for="toggle">
             <FaAlignJustify />
 

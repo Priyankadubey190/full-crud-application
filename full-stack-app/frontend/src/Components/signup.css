@@ -22,7 +22,7 @@
 .container > div > input{
     width: 80%;
     margin-top: 20px;
-    border-top: 1px solid blue;
+    border-top: 1px solid darkblue;
     border-radius: 50px;
     padding: 7px;
     font-size:20px;

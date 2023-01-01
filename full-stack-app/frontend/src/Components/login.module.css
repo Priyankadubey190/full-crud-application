@@ -7,7 +7,7 @@
     height: 700px;
     display: flex;
     align-items: center;
-    background: url("https://cdn.pixabay.com/photo/2016/11/22/21/57/apparel-1850804_960_720.jpg");
+    background: url("https://github.com/Priyankadubey190/full-crud-application/raw/main/full-stack-app/frontend/public/images/login-img.jpg");
 }
 .container > div{
     padding: 2% 3%;
@@ -29,7 +29,7 @@
 .btn{
     margin-top:20px;
     color: white;
-    background-color:blue;
+    background-color:darkblue;
     font-size: 25px;
     font-family: 'Courier New', Courier, monospace;
     border: none;

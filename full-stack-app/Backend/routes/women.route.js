@@ -1,5 +1,6 @@
 const express = require('express');
 const { authentication } = require('../middlewares/authentication');
+const { adminmiddleware } = require('../middlewares/authorization');
 const {WomenModel} = require('../models/Women.model');
 const womenRoute = express.Router();
 
@@ -12,6 +13,7 @@ womenRoute.get("/", async (req, res)=>{
 })
 
 womenRoute.use(authentication)
+womenRoute.use(adminmiddleware)
 womenRoute.post("/post", async (req, res)=>{
     const payload = req.body
     try{

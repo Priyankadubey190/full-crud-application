@@ -8,6 +8,8 @@ const cors = require('cors');
 const {womenRoute} = require('./routes/women.route')
 const {UserModel} = require('./models/User.model')
 const {authentication} = require('./middlewares/authentication')
+const {CartModel} = require('./models/Cart.model');
+const { cartRoute } = require('./routes/cart.route');
 app.use(express.json());
 app.use(cors({
     origin : "*"
@@ -18,7 +20,7 @@ app.get("/", (req, res) => {
 })
 
 app.post("/signup", async (req, res) => {
-  const {email, password} = req.body;
+  const {email, password,type} = req.body;
   const userPre = await UserModel.findOne({email})
 
   if(userPre?.email){
@@ -27,8 +29,9 @@ app.post("/signup", async (req, res) => {
   else{
     try{
 bcrypt.hash(password,4, async function(err,hash){
-    const user = new UserModel({email,password:hash})
+    const user = new UserModel({email,password:hash,type})
     await user.save()
+    await CartModel.create({userID:user._id})
     res.send({"message": "signup successfully"})
 })
     }
@@ -67,10 +70,11 @@ app.post("/login", async (req, res)=>{
         res.send("Something went worng, please try again later")
     }
 })
-
+//puja 63aeed10d74f0ebd959541b3
+//pro 63982f243369df9a18805163
 //app.use(authentication)
 app.use("/womendata", womenRoute)
-
+app.use("/cart", cartRoute)
 app.listen(process.env.port, async()=> {
 
    try{

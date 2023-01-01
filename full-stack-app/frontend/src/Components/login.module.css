@@ -7,6 +7,7 @@
     height: 700px;
     display: flex;
     align-items: center;
+    background: url("https://cdn.pixabay.com/photo/2016/11/22/21/57/apparel-1850804_960_720.jpg");
 }
 .container > div{
     padding: 2% 3%;

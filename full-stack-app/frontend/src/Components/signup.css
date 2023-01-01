@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .container{
-    background-image: linear-gradient(to right, blue, green);
+    background-image: linear-gradient(to right, rgb(193, 142, 14), white);
     height: 700px;
     display: flex;
     align-items: center;

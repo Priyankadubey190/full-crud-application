@@ -4,7 +4,7 @@
     width: 100%;
 }
 .container1{
-    max-width: 50%;
+    max-width: 70%;
     width: 100%;
     margin: 0 auto;
     padding: 1rem 0;
@@ -69,6 +69,10 @@ a:hover {
 } 
 .bars{
     display: none;
+}
+.cart{
+    color:white;
+    background-color:red;
 }
 @media all and (max-width:1408px){
     .container{

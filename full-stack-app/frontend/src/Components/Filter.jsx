@@ -1,6 +1,7 @@
 import {useState,useEffect} from "react";
 import {useSearchParams} from "react-router-dom";
 
+import Styles from "./filter.module.css";
 
 const Filter = () => {
   // DO NOT CHANGE THE ORDER of the category filters: ie. Analog, Digital, Chronograph in the UI
@@ -28,26 +29,30 @@ const Filter = () => {
   },[color,setSearchParams])
   return (
     <div>
+      <div>
       <h3>Filters</h3>
-      <div>Category</div>
+      <div style={{color:"orangered"}}>Choose your color</div>
       <div data-testid="filter-category">
-        <div>
-          <input type="checkbox" value="blue" onChange={handlefilter} defaultChecked={color.includes("blue")} />
+        <div className={Styles.filterBodyTextTwo}>
+          <input type="checkbox" value="blue" onChange={handlefilter} defaultChecked={color.includes("blue")}  />
           <label>Blue</label>
+          
         </div>
-        <div>
+        <div className={Styles.filterBodyTextTwo}>
           <input type="checkbox" value="red" onChange={handlefilter} defaultChecked={color.includes("red")} />
           <label>Red</label>
         </div>
-        <div>
+        <div className={Styles.filterBodyTextTwo}>
           <input type="checkbox" value="black" onChange={handlefilter} defaultChecked={color.includes("black")} />
           <label>Black</label>
         </div>
-        <div>
+        <div className={Styles.filterBodyTextTwo}>
           <input type="checkbox" value="yellow" onChange={handlefilter} defaultChecked={color.includes("yellow")} />
           <label>Yellow</label>
         </div>
       </div>
+      </div>
+      <div className={Styles.boleft}></div>
     </div>
   );
 };

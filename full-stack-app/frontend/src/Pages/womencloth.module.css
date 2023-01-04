@@ -1,8 +1,9 @@
 .myclass{
-    margin-left: 100px;
-    width:80%;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    width:95%;
     display: grid;
-    grid-template-columns: repeat(3,1fr) ;
+    grid-template-columns: repeat(4,1fr);
   }
   .filter{
     padding: 50px 10px 20px 50px;
@@ -10,31 +11,68 @@
   /* Link{
     background-color:none;
   } */
-  .childcon:hover{
+  /* .childcon:hover{
     background-color:green;
-  }
+  } */
   .childcon{
-    border:5px solid blue;
-    margin: 10px;
-    border-top-left-radius:30px;
-    border-bottom-right-radius:30px;
+    /* margin: 10px; */
+    width: 300px;
+    box-shadow: 5px 3px 10px orange;
+    margin-top:20px;
+    padding-bottom: 15px;
+    /* border-top-left-radius:30px;
+    border-bottom-right-radius:30px; */
 
   }
+.btn{
+  margin-top:10px;
+  padding: 3px 7px;
+  font-size:20px;
+  background-color: orangered;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+  /* .main{
+    height:auto;
+  } */
+  
   .detail{
     display:flex;
     justify-content:space-evenly;
-    font-size:20px;
+    font-size:16px;
     font-weight:bold;
-    color:rgb(76, 0, 255);
+    color: rgb(197, 134, 17);
   }
   span{
     color:black;
     font-size:18px;
   }
-  .proimg{
-    height:250px;
-    width: 360px;
-    border-top-left-radius:30px;
-    border-bottom-right-radius:30px;
 
+  .detail > div{
+   border:1px solid orange;
+   padding: 3px 7px;
+   margin-top: 10px;
+  }
+
+  .proimg{
+   
+    height:210px;
+    width: 95%;
+    margin: auto;
+    /* border-top-left-radius:30px;
+    border-bottom-right-radius:30px; */
+
+  }
+  .flex{
+    display: flex;
+    align-items: center;
+  }
+
+  .childcon:hover{
+    box-shadow: 5px 3px 10px rgb(215, 201, 201);
+    background-color: rgb(237, 218, 218);
+    border: 1px solid rgb(240, 227, 227);
+    width: 320px ;
   }

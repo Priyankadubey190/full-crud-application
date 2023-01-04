@@ -3,13 +3,13 @@ import style from "../Pages/womencloth.module.css"
 
 const ClothCard = ({ id,img,price,review }) => {
   return (
-    <div data-testid={`watch-card-wrapper-${id}`} className={style.childcon}>
-      <div>
-        <img data-testid="watch-card-image" src={img} alt="" height="150px" class="proimg" />
+    <div className={style.childcon}>
+      <div className={style.flex}>
+        <img src={img} alt="" className={style.proimg} />
       </div>
       <div className={style.detail}>
-        <div data-testid="watch-name">Price <span>{price}</span></div>
-        <div data-testid="watch-category">Review <span>{review}</span></div>
+        <div>Price <span>{`$${price}`}</span></div>
+        <div>Review <span>{review}</span></div>
       </div>
     </div>
   );

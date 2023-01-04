@@ -3,6 +3,9 @@ import "./navbar.css";
 import {FaAlignJustify} from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
 export default function Navbar() {
   return (
     <div>
@@ -19,7 +22,14 @@ export default function Navbar() {
                 <ul className="flex1 aligncenter bg-column">
                     <li className="nav-item">
                         {/* <a href="/login">Home</a> */}
-                        <Link to="/" className="nav-text">Home</Link>
+                        <Link to="/" className="nav-text">WOMEN</Link>
+                    </li>
+                    <li className="nav-item">
+                        {/* <a href="/login">Home</a> */}
+                        <Link to="/" className="nav-text">MEN</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/cart" className="nav-text">my order</Link>
                     </li>
                     <li className="nav-item">
                        <Link to="/signup" className="nav-text">Sign Up</Link>
@@ -27,8 +37,13 @@ export default function Navbar() {
                     <li className="nav-item">
                        <Link to="/login" className="nav-text">Login</Link>
                     </li>
+                    
                     <li className="nav-item">
-                        <Link to="/product/:id" className="nav-text">Product Details</Link>
+                        <Link to="/product/:id" className="nav-text"> 
+                        <img src="https://toppng.com/uploads/preview/shopping-cart-png-image-shopping-cart-icon-sv-11562865326ta92uix1ak.png" height="50px" width="60px" alt="" /> 
+
+                        {/* <FontAwesomeIcon icon="fa-solid fa-cart-shopping" className="cart"/> */}
+                        </Link>
                     </li>
                    
                 </ul>

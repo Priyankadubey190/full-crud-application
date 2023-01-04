@@ -28,17 +28,31 @@ const WomenClothData = () => {
   },[location.search])
 
   return (
+    <div>
+      <div style={{padding:"50px", margin:"auto"}}>
+        <img src="./images" alt="" height="400px" width="100%"/>
+      </div>
     <div style={{display: 'flex'}}>
       <div className={style.filter}>
       <Filter />
       </div>
       <div className={style.myclass}>
         {/* Map through the watch list here using WatchCard Component */}
+        
         {
+         
           clothdata.length > 0 && 
-          clothdata.map((el)=> <Link key={el.id} to={`/prodectdetails/${el.id}`} style={{textDecoration:"none"}}> <ClothCard id={el.id} img={el.image} price={el.price} review={el.review}/> </Link>)
+          clothdata.map((el)=>
+          <div className={style.childcon}>
+          <Link key={el.id} to={`/prodectdetails/${el._id}`} style={{textDecoration:"none"}}> <ClothCard id={el.id} img={el.image} price={el.price} review={el.review}/> </Link>
+          <button className={style.btn}>ADD</button>
+         </div>
+          )
+        
         }
+        
       </div>
+    </div>
     </div>
   );
 };

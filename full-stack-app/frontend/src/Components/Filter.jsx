@@ -7,7 +7,7 @@ const Filter = () => {
   // DO NOT CHANGE THE ORDER of the category filters: ie. Analog, Digital, Chronograph in the UI
 
   const [searchParams,setSearchParams] = useSearchParams();
-  console.log("search-cat",searchParams.getAll("color"))
+ // console.log("search-cat",searchParams.getAll("color"))
   const [color,setColor] = useState(searchParams.getAll("color") || [])
   const handlefilter = (e)=>{
     const option = e.target.value;
@@ -20,7 +20,7 @@ const Filter = () => {
     }
     setColor(newCategory)
   }
-  console.log("category",color)
+ // console.log("category",color)
 
   useEffect(() =>{
     const params = {};

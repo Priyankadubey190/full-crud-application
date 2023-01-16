@@ -7,10 +7,14 @@ export const login = (payload) => (dispatch)=>{
 
     return axios ({
         method: "post", 
-        baseURL:"http://localhost:8080/login",
+        baseURL:"https://gleaming-suspenders-bass.cyclic.app/login",
         data:payload,
     })
-    .then((r)=>dispatch({type : types.LOGIN_SUCCESS, payload: r.data}))
+    .then((r)=>{
+        console.log("logauth",r.data.token)
+        dispatch({type : types.LOGIN_SUCCESS, payload: `Bearer ${r.data.token}`})
+        console.log("Login success")
+    })
     .catch((e)=> dispatch({type : types.LOGIN_FAILURE}));
 };
 

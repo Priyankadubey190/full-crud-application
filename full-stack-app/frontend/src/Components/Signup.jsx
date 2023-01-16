@@ -4,14 +4,15 @@ export const Signup = ()=>{
  
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-
+    const [type, setType] = useState("")
     const handleSubmit = () => {
         const payload = {
             email,
-            password
+            password,
+            type
         }
        
-        fetch("http://localhost:8080/signup", {
+        fetch("https://gleaming-suspenders-bass.cyclic.app/signup", {
             method : "POST",
             body : JSON.stringify(payload),
             headers : {
@@ -30,6 +31,8 @@ export const Signup = ()=>{
                 <input type="email" placeholder="Enter your email" onChange={(e) =>setEmail(e.target.value)}/>
                 <br />
                 <input type="password" placeholder="Enter your password" onChange={(e) => setPassword(e.target.value)}/>
+                <br />
+                <input type="password" placeholder="Are you User or Admin" onChange={(e) => setType(e.target.value)}/>
                 <br />
                 <button className="btn" onClick={handleSubmit}>Submit</button>
             </div>

@@ -9,7 +9,7 @@ const ReqAuth = ({children}) => {
     const isAuth = useSelector((state) => state.AuthReducer.isAuth);
     const location = useLocation(); 
     if (!isAuth) {
-      console.log("isAuth", isAuth);
+      //console.log("isAuth", isAuth);
      return( <Navigate
         to="/login"
         state={{from: location.pathname}} replace={true}

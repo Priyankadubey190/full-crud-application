@@ -10,7 +10,7 @@ export const Login = ()=>{
 
     const navigate = useNavigate(); 
     const location = useLocation();
-    console.log("inside login location",location)
+    //console.log("inside login location",location)
     const comingfrom = location.state?.from?.pathname || "/";
     const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ export const Login = ()=>{
           dispatch(login({ email, password })) 
             .then((r) => {
             
-              console.log("r--", r);
+             // console.log("r--", r);
               if (r.type === "LOGIN_SUCCESS") {
                 
                 navigate(comingfrom, { replace:true }); 

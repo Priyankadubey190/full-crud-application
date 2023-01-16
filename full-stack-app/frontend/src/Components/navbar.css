@@ -2,6 +2,7 @@
     background-color: #28373E;
     height:100px;
     width: 100%;
+    position: fixed;
 }
 .container1{
     max-width: 70%;
@@ -44,7 +45,7 @@
     color: #ffffff;
 }
 .header nav ul li{
-    margin-left: 1.1rem;
+    margin-left: 2.1rem;
 }
 nav ul li {
     text-transform: uppercase;
@@ -72,7 +73,8 @@ a:hover {
 }
 .cart{
     color:white;
-    background-color:red;
+    font-size: 35px;
+    /* background-color:red; */
 }
 @media all and (max-width:1408px){
     .container{
@@ -82,6 +84,11 @@ a:hover {
     }
 }
 @media all and (max-width:968px) {
+    
+    .logoimg{
+        height:40px;
+    }
+
   .bg-column{
        flex-direction: column;
    }

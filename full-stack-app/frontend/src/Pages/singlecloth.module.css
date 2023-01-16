@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding-top: 160px;
+}
+
+h2{
+    font-size:30px;
+    color: orangered;
+}
+
+.topcontainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+.topcontainer > div > img{
+    width: 70%;
+    margin: auto;
+    border: 1px solid orangered;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+}
+.topcontainer > div > img:hover{
+    width: 74%;
+}
+
+.flex{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span{
+    display: inline-block;
+    color:orangered;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn{
+    margin-top:10px;
+    padding: 3px 15px;
+    font-size:20px;
+    background-color: orangered;
+    border: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  .leftcon{
+    width: 30%;
+    /* border: 1px solid orangered; */
+    background-color: grey;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .icon{
+    width: 150px;
+    position: absolute;
+    top:250px;
+    right: inherit;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .iconsize{
+    font-size:50px;
+    color: orangered;
+  }
+
+  .leftchild{
+    /* border: 1px solid orangered; */
+    /* padding: 150px 200px 100px 0px; */
+  }
+
+  /* .leftchild > div > div{
+    display: flex;
+  } */
+
+  .imgcon{
+    width:60%;
+  }

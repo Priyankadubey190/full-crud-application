@@ -1,0 +1,43 @@
+.container{
+    padding: 100px;
+    background-image: linear-gradient(to right, rgb(193, 142, 14), rgb(212, 151, 151));
+}
+
+.btn{
+    background-color:orangered;
+    color: white;
+    font-size:25px;
+    padding: 3px 5px 3px 5px;
+    border: none;
+    margin-right: 20px;
+}
+
+.childcon{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 10px;
+}
+
+.left{
+    background-color: white;
+    box-shadow: 2px 4px 3px grey;
+    padding: 50px;
+    margin:30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+label{
+    font-size:20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+
+}
+
+.myinput{
+    width: 100%;
+    font-size:18px;
+    margin-top: 20px;
+
+}

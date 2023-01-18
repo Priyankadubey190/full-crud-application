@@ -1,59 +1,61 @@
-import React from 'react'
+import { Link, useNavigate } from "react-router-dom";
 import "./navbar.css";
-import {FaAlignJustify,FaShoppingCart} from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { FaBars, FaShoppingCart } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
+import { useDispatch, useSelector } from "react-redux";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { useState } from "react";
+//import { logOut } from "../Redux/AuthReducer/action";
 
-export default function Navbar() {
+export const Navbar = () => {
+  const [Mobile, setMobile] = useState(false);
+  const { tokenData, isAuth } = useSelector((state) => state.AuthReducer);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  // const handleLog = () => {
+  //   if (isAuth) {
+  //     dispatch(logOut());
+  //   } else {
+  //     navigate("/signin", { replace: true });
+  //   }
+  // };
+
   return (
-    <div>
-        <header className="header">
-        <div className="container1 flex">
-            {/* <span className="logo">OYODO</span> */}
-            <img src="https://github.com/Priyankadubey190/full-crud-application/raw/main/full-stack-app/frontend/public/images/web-logo.png" alt="" class="logoimg" />
-            <label className="bars" for="toggle">
-            <FaAlignJustify />
+    <nav className="mynavbar">
+      <img src="https://github.com/Priyankadubey190/full-crud-application/raw/main/full-stack-app/frontend/public/images/web-logo.png" alt="" className="logo" />
 
-            </label>
-            <input id="toggle" type="checkbox" />
-            <nav className="nav">
-                <ul className="flex1 aligncenter bg-column">
-                    <li className="nav-item">
-                        {/* <a href="/login">Home</a> */}
-                        <Link to="/women" className="nav-text">WOMEN</Link>
-                    </li>
-                    <li className="nav-item">
-                        {/* <a href="/login">Home</a> */}
-                        <Link to="/men" className="nav-text">MEN</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/cart" className="nav-text">my order</Link>
-                    </li>
-                    <li className="nav-item">
-                       <Link to="/signup" className="nav-text">Sign Up</Link>
-                    </li >
-                    <li className="nav-item">
-                       <Link to="/login" className="nav-text">Login</Link>
-                    </li>
-                    
-                    <li className="nav-item">
-                        <Link to="/product/:id" className="nav-text"> 
-                        {/* <img src="https://toppng.com/uploads/preview/shopping-cart-png-image-shopping-cart-icon-sv-11562865326ta92uix1ak.png" height="50px" width="60px" alt="" />  */}
+      <ul
+        className={Mobile ? "nav-link-mobile" : "mynav-link"}
+        onClick={() => setMobile(false)}
+      >
+        <Link to="/">
+          <li>HOME</li>
+        </Link>
+        <Link to="/women">
+          <li>WOMEN</li>
+        </Link>
+        <Link to="/man">
+          <li>MAN</li>
+        </Link>
 
-                   <FaShoppingCart className="cart"/>
-
-
-                        {/* <FontAwesomeIcon icon="fa-solid fa-cart-shopping" className="cart"/> */}
-                        </Link>
-                    </li>
-                   
-                </ul>
-            </nav>
-        </div>
-    </header>
-    </div>
-
-  )
-}
+        <Link to="/login">
+          <li>LOGIN</li>
+        </Link>
+        <Link to="/signup">
+          <li>SIGN UP </li>
+        </Link>
+        <Link to="/cart">
+        <li><FaShoppingCart className="cart"/></li>
+        </Link>
+        {/* <li>
+          <button className="login" onClick={handleLog}>
+            {isAuth ? "SignOut" : "SignIn"}
+          </button>
+        </li> */}
+      </ul>
+      <button className="mobile-menu-icon" onClick={() => setMobile(!Mobile)}>
+        {Mobile ? <ImCross /> : <FaBars />}
+      </button>
+    </nav>
+  );
+};

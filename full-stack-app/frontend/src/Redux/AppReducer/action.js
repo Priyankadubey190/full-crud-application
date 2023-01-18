@@ -64,6 +64,9 @@ const getCartData = (auth)=>(dispatch)=>{
         dispatch({type: types.GET_CARTDATA_SUCCESS,
             payload: r.data.productarr })
 
+            console.log("cartk",r.data.cartkey)
+
+
             dispatch(getcartSuccesss(r.data.cartkey)) 
         
        

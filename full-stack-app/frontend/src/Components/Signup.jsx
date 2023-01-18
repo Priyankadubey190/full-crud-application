@@ -25,16 +25,16 @@ export const Signup = ()=>{
     }
 
     return(
-        <div className="container">
+        <div className="signcontainer">
             <div>
                 <input type="text" placeholder="Enter your name"/>
                 <input type="email" placeholder="Enter your email" onChange={(e) =>setEmail(e.target.value)}/>
                 <br />
                 <input type="password" placeholder="Enter your password" onChange={(e) => setPassword(e.target.value)}/>
                 <br />
-                <input type="password" placeholder="Are you User or Admin" onChange={(e) => setType(e.target.value)}/>
+                <input type="text" placeholder="Are you User or Admin" onChange={(e) => setType(e.target.value)}/>
                 <br />
-                <button className="btn" onClick={handleSubmit}>Submit</button>
+                <button className="signbtn" onClick={handleSubmit}>Submit</button>
             </div>
         </div>
     )

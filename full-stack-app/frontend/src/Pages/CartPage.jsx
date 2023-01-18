@@ -21,53 +21,6 @@ const Navigate = useNavigate();
 
     console.log("data",cartData);
 
-    // let tpr = cartData.reduce((accumulator,currentvalue)=> Number(accumulator.products.price)* Number(accumulator.quantity)+ Number(currentvalue.products.price)* Number(currentvalue.quantity))
-
-    //         console.log("first",tpr)
-    //         setTprice(tpr)
-
-    // setData(cartData)
-
-    // const getCartData = ()=>{
-    //     dispatch(getcartRequest);
-    //     return axios
-    //     .get(`https://gleaming-suspenders-bass.cyclic.app/cart`,
-    //     {
-    //       headers: {
-    //         authorization: auth,
-    //       },
-    //     })
-    //     .then((r)=>{
-    //         let dt = r.data.productarr  
-          
-    //         console.log("cartData",r.data);
-    //         console.log("keyCart",r.data.cartkey)
-    //         dispatch(getcartSuccesss(r.data.cartkey));
-            
-    //         setData(dt)
-
-    //         console.log("mydt",data)
-
-    //         let a = data[0].products.price
-            
-
-    //         console.log("first-price",a)
-
-    //         let tpr = data.reduce((accumulator,currentvalue)=> Number(accumulator.products.price)* Number(accumulator.quantity)+ Number(currentvalue.products.price)* Number(currentvalue.quantity))
-
-    //         console.log("first",tpr)
-    //         setTprice(tpr)
-    //         console.log("aprice",tprice)
-    //         console.log("cdt",data)
-    //     })
-    //     .catch((e)=>{
-    //         dispatch(getcartFailure)
-    //     });
-    // }
-
-
-    /////
-
     const handleaddtoCartone = (id,data,qty)=>{
       axios.post(`https://gleaming-suspenders-bass.cyclic.app/cart/${id}`,{
         products: [
@@ -139,28 +92,15 @@ const handleSetPrice = ()=>{
   console.log("tpr",tpr)
   setTprice(tpr)
 
-  // let tpr = cartData.reduce((accumulator,currentvalue)=> Number(accumulator.products.price)* Number(accumulator.quantity)+ Number(currentvalue.products.price)* Number(currentvalue.quantity))
-
-  //           console.log("first",tpr)
-  //           setTprice(tpr)
-
 }
 
     useEffect(()=>{
         
       dispatch(getCartData(auth));
-        //console.log("tpin",tprice)
-        //console.log("datain",data)
-
-        //setData(cartData)
 
     },[])
 
     useEffect(()=>{
-      // let tpr = cartData.reduce((accumulator,currentvalue)=> Number(accumulator.products.price)* Number(accumulator.quantity)+ Number(currentvalue.products.price)* Number(currentvalue.quantity))
-
-      // console.log("tpr",tpr)
-      // setTprice(tpr)
       handleSetPrice()
     },[cartData])
 
@@ -175,7 +115,7 @@ const handleSetPrice = ()=>{
       return(
         <div className={style.flex}>
             <div>
-            <img src={el.products.image} alt="" height="200px" width="200px"/>
+            <img src={el.products.image} alt="" className={style.imgclass} />
             </div>
             <div className={style.childcon}> 
                 <div>

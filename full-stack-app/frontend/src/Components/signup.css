@@ -3,15 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container{
+.signcontainer{
     background-image: linear-gradient(to right, rgb(193, 142, 14), white);
     height: 700px;
     display: flex;
+    padding: 100px;
     align-items: center;
 }
-.container > div{
-    padding: 2% 3%;
-    height: 50%;
+.signcontainer > div{
+    padding: 5% 6%;
+    height: 90%;
     width: 30%;
     margin:auto;
     background-color:white;
@@ -19,15 +20,15 @@
     border-radius:50px;
 
 }
-.container > div > input{
-    width: 80%;
+.signcontainer > div > input{
+    width: 95%;
     margin-top: 20px;
     border-top: 1px solid darkblue;
     border-radius: 50px;
-    padding: 7px;
+    padding: 7px 10px;
     font-size:20px;
 }
-.btn{
+.signbtn{
     margin-top:20px;
     color: white;
     background-color:blue;
@@ -41,7 +42,7 @@
 }
 
 @media screen and (max-width: 992px){
-    .container > div{
+    .signcontainer > div{
         width: 95%;
     }
 }

@@ -13,7 +13,7 @@ export const login = (payload) => (dispatch)=>{
     .then((r)=>{
         console.log("logauth",r.data.token)
         dispatch({type : types.LOGIN_SUCCESS, payload: `Bearer ${r.data.token}`})
-        console.log("Login success")
+        console.log("Again Login success")
     })
     .catch((e)=> dispatch({type : types.LOGIN_FAILURE}));
 };

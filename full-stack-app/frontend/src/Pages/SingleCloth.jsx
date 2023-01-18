@@ -22,13 +22,36 @@ const SingleCloth = () => {
     }
   }, [singleprodect?.length, dispatch]);
 
-  // useEffect(() => {
-  //   if (id) {
-  //     const temp = singleprodect?.filter((data) => data._id === Number(id));
-  //     console.log("product",temp)
-  //     temp && setCurrentCloth(temp);
-  //   }
-  // }, [singleprodect, id]);
+  const cartKey = useSelector((state) => state.AppReducer.cartKey);
+
+  const handleaddtoCart = (id,data)=>{
+    axios.post(`https://gleaming-suspenders-bass.cyclic.app/cart/${id}`,{
+      products: [
+        {
+          product_id: data,
+          quantity: 1
+        },
+      ],
+    },
+    {
+      headers: {
+        authorization: auth,
+  
+      }
+      
+    }
+    
+    )
+    .then((r)=>{
+      console.log("cartpostdt",r)
+      alert("Item is added successfully")
+    })
+    .catch((er)=>{
+      console.log("carterr",er)
+    })
+  }
+  
+  
 
   useEffect(() => {
     axios
@@ -50,7 +73,7 @@ const SingleCloth = () => {
   }, []);
 
   return (
-    <div className={style.container}>
+    <div className={style.procontainer}>
       <h2>Welcome to Product's Detail</h2>
       <br />
       <div className={style.topcontainer}>
@@ -69,7 +92,7 @@ const SingleCloth = () => {
           </div>
           <div className={style.flex}>
           <div>Price <span>${currentCloth.price}</span></div>
-          <button className={style.btn}>Add</button>
+          <button className={style.btn} onClick={()=>handleaddtoCart(cartKey,currentCloth._id)}>Add</button>
           </div>
           
           </div>

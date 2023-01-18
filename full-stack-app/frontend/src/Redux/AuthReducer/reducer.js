@@ -8,6 +8,7 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
+ // console.log("action",action)
   const {type,payload} = action;
   switch (type){
     case types.LOGIN_REQUEST:

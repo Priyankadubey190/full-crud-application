@@ -1,55 +1,40 @@
 import React from 'react'
+import { ImageSlider } from '../Components/ImageSlider'
 import "./home.css"
 export default function Home() {
   return (
-    <div>
-      <div id="surcontainer">
-                <input type="radio" name="images" id="suri1" checked  />
-                <input type="radio" name="images" id="suri2" />
-                <input type="radio" name="images" id="suri3" />
-                <input type="radio" name="images" id="suri4" />
-        
-                <div className="surslide_img" id="surone">
-                    <img src="../images/topimg1.jpg"/>
-        
-                    <label  for="suri4"  className="surpre"></label>
-                    <label  for="suri2"  className="surnxt"></label>
-                </div>
-             
-        
-                <div className="surslide_img" id="surtwo">
-                    <img src="../images/top-img-2.jpg"/>
-        
-                    <label  for="suri1"  className="surpre"></label>
-                    <label  for="suri3"  className="surnxt"></label>
-            
-                </div>
-        
-               
-                <div className="surslide_img" id="surthree">
-                    <img src="../images/img-top-4.webp"/>
-        
-                    <label  for="suri2"  className="surpre"></label>
-                <label  for="suri4"  className="surnxt"></label>
-                </div>
-        
-                
-        
-                <div className="surslide_img" id="surfour">
-                    <img src="../images/top-img-5.jpg"/>
-        
-                    <label  for="suri3"  className="surpre"></label>
-                    <label  for="suri1"  className="surnxt"></label>
-                </div>
-        
-                <div className="surnav">
-             <label className="surdots" id="surdot1" for="suri1"></label>
-             <label className="surdots" id="surdot2" for="suri2"></label>
-             <label className="surdots" id="surdot3" for="suri3"></label>
-             <label className="surdots" id="surdot4" for="suri4"></label>
-                </div>
-               
-            </div>
+    <div className="homecontainer">
+
+
+<ImageSlider />
+ <div className="sach_cont">
+    <div className="box3_backgroundimage">
+       <div className="innerdiv">
+           <img className="sach_2" src="https://github.com/Priyankadubey190/full-crud-application/raw/main/full-stack-app/frontend/src/images/sach-img1.gif" alt="sach"/>
+           <div><a className="sach_3" href="">SHOES</a></div>
+           
+       </div>
+     
+       <div className="innerdiv">
+           <img className="sach_2" src="https://github.com/Priyankadubey190/full-crud-application/raw/main/full-stack-app/frontend/src/images/face-cover.jpg"/>
+           <div>
+           <a  className="sach_3" href="">FACE COVERS</a>
+           </div>
+           
+       </div>
+       <div className="innerdiv">
+        <img className="sach_2"  src="https://github.com/Priyankadubey190/full-crud-application/raw/main/full-stack-app/frontend/src/images/atheli.jpg"/>
+        <div> <a className="sach_3" href="">ATHLEISURE</a></div>
+       
     </div>
+    <div className="innerdiv">
+        <img className="sach_2"  src="https://github.com/Priyankadubey190/full-crud-application/raw/main/full-stack-app/frontend/src/images/ACCESSORIES.jpg"/>
+        <div> <a className="sach_3" href="">ACCESSORIES</a></div>
+       
+    </div>
+      </div>
+    </div>
+</div>
+    
   )
 }

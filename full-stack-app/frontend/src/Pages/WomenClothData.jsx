@@ -17,10 +17,12 @@ const WomenClothData = () => {
 
   const auth = useSelector((state) => state.AuthReducer.token);
 
+  // const auth = useSelector((state) => state.AuthReducer.token);
+
   const cartData = useSelector((state) => state.AppReducer.cartData);
 
 console.log("cartdata",cartData)
-console.log("cAuth",auth)
+console.log("womenAuth",auth)
 
   const cartKey = useSelector((state) => state.AppReducer.cartKey);
 
@@ -53,28 +55,6 @@ const handleaddtoCart = (id,data)=>{
   })
 }
 
-// const getCartData = ()=>{
-//   dispatch(getcartRequest);
-//   return axios
-//   .get(`https://gleaming-suspenders-bass.cyclic.app/cart`,
-//   {
-//     headers: {
-//       authorization: auth,
-//     },
-//   })
-//   .then((r)=>{
-//       let dt = r.data.productarr  
-    
-//       console.log("cartData",r.data);
-//       console.log("keyCart",r.data.cartkey)
-//       dispatch(getcartSuccesss(r.data.cartkey));
-      
-//       //console.log("cdt",data)
-//   })
-//   .catch((e)=>{
-//       dispatch(getcartFailure)
-//   });
-// }
 
 useEffect(()=>{
   dispatch(getCartData(auth))

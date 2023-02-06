@@ -16,7 +16,10 @@ const getClothData = (queryParam)=> (dispatch)=>{
     .then((r)=>{
         dispatch({
             type: types.GET_CLOTHS_DATA_SUCCESS,
-            payload: r.data
+            payload: r.data.data
+        })
+        dispatch({type:types.GET_DATA_LENGTH,
+             payload: r.data.datalength 
         })
         console.log("clothData",r);
     })

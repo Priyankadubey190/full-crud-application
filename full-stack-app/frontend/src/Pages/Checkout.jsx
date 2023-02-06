@@ -36,6 +36,7 @@ export default function Checkout() {
   const handleDelete = (cartKey) => {
 
     if(name==="" || city==="" || district==="" || state==="" || pincode==="" || contact==="" || address===""){
+     console.log(name,city,district,state,pincode,contact,address)
       alert("Please Fill All Details")
     }
     else{
@@ -110,13 +111,13 @@ export default function Checkout() {
             <br />
             <input type="text" onChange={(e) => setDistrict(e.target.value)}placeholder="Enter District Name" className={style.myinput} />
             <br />
-            <input type="text" onClick={(e)=>setState(e.target.value)} placeholder="Enter State Name" className={style.myinput} />
+            <input type="text" onChange={(e)=>setState(e.target.value)} placeholder="Enter State Name" className={style.myinput} />
             <br />
-            <input type="text" onClick={(e)=>setPincode(e.target.value)} placeholder="Enter Your Pincode" className={style.myinput} />
+            <input type="text" onChange={(e)=>setPincode(e.target.value)} placeholder="Enter Your Pincode" className={style.myinput} />
             <br />
-            <input type="text" onClick={(e)=>setContact(e.target.value)} placeholder="Enter Contact Number" className={style.myinput} />
+            <input type="text" onChange={(e)=>setContact(e.target.value)} placeholder="Enter Contact Number" className={style.myinput} />
             <br />
-            <input type="text" onClick={(e)=>setAddress(e.target.value)} placeholder="Enter Your Address" className={style.myinput} />
+            <input type="text" onChange={(e)=>setAddress(e.target.value)} placeholder="Enter Your Address" className={style.myinput} />
             <br />
           </div>
         </div>

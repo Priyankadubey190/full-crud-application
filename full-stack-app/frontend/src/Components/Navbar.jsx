@@ -22,6 +22,7 @@ export const Navbar = () => {
 
   return (
     <nav className="mynavbar">
+     
       <img src="https://github.com/Priyankadubey190/full-crud-application/raw/main/full-stack-app/frontend/public/images/web-logo.png" alt="" className="logo" />
 
       <ul
@@ -47,15 +48,17 @@ export const Navbar = () => {
         <Link to="/cart">
         <li><FaShoppingCart className="cart"/></li>
         </Link>
+        </ul>
         {/* <li>
           <button className="login" onClick={handleLog}>
             {isAuth ? "SignOut" : "SignIn"}
           </button>
         </li> */}
-      </ul>
+      
       <button className="mobile-menu-icon" onClick={() => setMobile(!Mobile)}>
         {Mobile ? <ImCross /> : <FaBars />}
       </button>
+      
     </nav>
   );
 };

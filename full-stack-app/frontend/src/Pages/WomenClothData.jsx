@@ -4,15 +4,19 @@ import Filter from "../Components/Filter";
 import {useEffect} from "react";
 import {useDispatch,useSelector} from "react-redux";
 import {useSearchParams,useLocation, Link} from "react-router-dom";
+
+import {useState} from "react";
 import {getCartData, getcartFailure, getcartRequest, getcartSuccesss, getClothData} from "../Redux/AppReducer/action";
 import "../App.css"
 import ClothCard from "../Components/ClothCard";
 import axios from "axios";
 const WomenClothData = () => {
-
-  const [searchParams] = useSearchParams();
+  const [page, setPage] = useState(1)
+  //const [searchParams] = useSearchParams();
   const dispatch = useDispatch();
   const clothdata = useSelector((store)=>store.AppReducer.cloths);
+
+  const clothlength = useSelector((store)=>store.AppReducer.datalength);
   const location = useLocation();
 
   const auth = useSelector((state) => state.AuthReducer.token);
@@ -54,24 +58,33 @@ const handleaddtoCart = (id,data)=>{
     console.log("carterr",er)
   })
 }
-
+const [searchParams,setSearchParams] = useSearchParams();
 
 useEffect(()=>{
   dispatch(getCartData(auth))
 },[])
 
   useEffect(() =>{
+    const params = {}
+    page && (params.page = page)
+    
+   setSearchParams(params)
+
     if(location || clothdata.length === 0){
       const category = searchParams.getAll('color') 
       const queryParam = { 
         params: { 
           color: category, 
-
+          page: page  
         }
       }
       dispatch(getClothData(queryParam))
     }
-  },[location.search])
+    
+
+    console.log("page",page)
+
+  },[location.search,page])
 
   return (
     <div>
@@ -97,8 +110,12 @@ useEffect(()=>{
         
         }
         
+        
       </div>
     </div>
+    <div className={style.mybtn}>
+        <button className={style.btn} onClick={()=>{if(page>1){setPage(page-1)}}}>Previous</button><button className={style.btn} onClick={()=>{if(page<clothlength){setPage(page+1)}}}>Next</button>
+        </div>
     </div>
   );
 };

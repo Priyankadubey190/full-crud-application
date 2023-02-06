@@ -34,6 +34,14 @@
   font-weight: bold;
 }
 
+.mybtn{
+  width:15%;
+  margin:auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+
   /* .main{
     height:auto;
   } */

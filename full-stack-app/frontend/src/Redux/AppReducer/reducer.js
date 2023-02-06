@@ -4,6 +4,7 @@ const initialState = {
   cloths: [],
   cartData:[],
   cartKey:[],
+  datalength:0,
   isLoading: false,
   isError: false,
 };
@@ -61,7 +62,13 @@ const reducer = (state = initialState, action) => {
                         ...state,
                         isLoading:false,
                         isError:true
-                      }
+                      };
+                      case types.GET_DATA_LENGTH:
+                        return{
+                          ...state,
+                          isLoading:false,
+                          datalength:payload
+                        }
           default:
             return state;
   }

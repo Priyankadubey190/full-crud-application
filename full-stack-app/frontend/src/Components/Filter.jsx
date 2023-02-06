@@ -9,6 +9,9 @@ const Filter = () => {
   const [searchParams,setSearchParams] = useSearchParams();
  // console.log("search-cat",searchParams.getAll("color"))
   const [color,setColor] = useState(searchParams.getAll("color") || [])
+
+  const [page,setPage] = useState(searchParams.get("page"))
+
   const handlefilter = (e)=>{
     const option = e.target.value;
     let newCategory = [...color]
@@ -19,6 +22,7 @@ const Filter = () => {
       newCategory.push(option);
     }
     setColor(newCategory)
+    
   }
  // console.log("category",color)
 
